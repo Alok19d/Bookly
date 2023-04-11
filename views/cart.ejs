@@ -1,0 +1,13 @@
+<%-include("partials/header")-%>
+<%if(cartitems.length == 0){%>
+    <div style="min-height: 600px; margin:10px;">
+        <p style="text-align: center; font-size:2.5rem; padding:50px 0px ">No items found</p>
+        <button style="padding:5px 8px; font-size:2.5rem;border-radius: 0.5rem;background:var(--green); color: #fff;margin:auto;">Continue Shopping</button>
+    </div>
+<%}else{%>
+<% cartitems.forEach(item=>{ %>
+<p><%=item%></p>
+<%})}%>
+
+
+<%-include("partials/footer")-%>
